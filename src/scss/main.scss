@@ -8,6 +8,14 @@
   font-family: 'Poppins', sans-serif;
 }
 
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$primary-color: #ff9900;
+$text-color: #173a56;
+
 .container {
   max-width: 1108px;
   margin: 0 auto;
@@ -22,7 +30,7 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  background-color: #ff9900;
+  background-color: $primary-color;
   outline: none;
   transition: all 0.1s linear;
   color: #fff;
@@ -37,7 +45,7 @@
     color: #173a56;
 
     &:hover {
-      background-color: #ff9900;
+      background-color: $primary-color;
     }
   }
 
@@ -45,11 +53,11 @@
     margin-left: 13px;
   }
 
-  @media (max-width: 976px) {
+  @media (max-width: $screen-lg) {
     padding: 9px 20px;
   }
 
-  @media (max-width: 476px) {
+  @media (max-width: $screen-sm) {
     padding: 5px 15px;
   }
 }
@@ -57,6 +65,7 @@
 @import 'reset.scss';
 @import 'header.scss';
 @import 'tests.scss';
+@import 'info.scss';
 
 body {
   font-family: 'Poppins', sans-serif;

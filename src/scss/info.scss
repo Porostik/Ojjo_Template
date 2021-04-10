@@ -1,0 +1,146 @@
+.info__marketers {
+  .info__body {
+    background: url(/img/info-bg-2.svg) right center no-repeat;
+  }
+}
+
+.info__product {
+  .info__body {
+    background: url(/img/info-bg-3.svg) left center no-repeat;
+
+    &-inner {
+      margin-left: auto;
+    }
+
+    .info__list {
+      list-style: none;
+      padding-left: 65px;
+
+      &-item {
+        position: relative;
+        font-size: 16px;
+        font-weight: 500;
+
+        & + .info__list-item {
+          margin-top: 30px;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -60px;
+          width: 35px;
+          height: 35px;
+          background: url(/img/tick.svg) center no-repeat, $primary-color;
+
+          display: block;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    @media (max-width: $screen-sm) {
+      min-height: 500px;
+    }
+  }
+}
+
+.info {
+  &__inner {
+    padding-top: 120px;
+  }
+
+  &__body {
+    background: url(/img/info-bg-1.svg) right center no-repeat;
+    min-height: 574px;
+
+    &-inner {
+      width: 40%;
+    }
+
+    &-title {
+      .subtitle {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .title {
+        color: $text-color;
+        font-size: 36px;
+        font-weight: 700;
+      }
+    }
+
+    &-content {
+      &-title {
+        color: $text-color;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 22px 0 30px 0;
+  }
+
+  @media (max-width: $screen-lg) {
+    &__body {
+      background-size: 400px;
+    }
+  }
+
+  @media (max-width: $screen-md) {
+    .info {
+      &__inner {
+        padding-top: 50px;
+      }
+      &__body {
+        background-size: 300px;
+
+        &-inner {
+          width: 55%;
+        }
+
+        &-title {
+          .title {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    .info {
+      &__inner {
+        padding-top: 20px;
+      }
+      &__body {
+        background: none;
+
+        &-inner {
+          width: 100%;
+          text-align: center;
+        }
+
+        &-title {
+          .title {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
